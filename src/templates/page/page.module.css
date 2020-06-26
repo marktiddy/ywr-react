@@ -1,0 +1,19 @@
+.container {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.container ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+.container h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+.container a {
+  text-decoration: none;
+  color: #388fc6;
+}

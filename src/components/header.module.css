@@ -1,0 +1,22 @@
+:root {
+  --main-color: #388fc6;
+}
+
+.main {
+  font-family: "Open Sans", sans-serif;
+  background: var(--main-color);
+  color: white;
+}
+
+.dropdown {
+  background: white;
+  color: var(--main-color);
+}
+.dropdown-menu {
+  background: white;
+  color: var(--main-color);
+}
+.dropdown:hover {
+  background: var(--main-color);
+  color: white;
+}

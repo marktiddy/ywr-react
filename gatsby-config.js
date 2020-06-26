@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `YWR Gatsby`,
+    description: `Experimental version of YWR`,
+    author: `@marktiddy`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,6 +11,64 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "typography",
+      options: {
+        pathToConfigModule: "src/utils/typography.js",
+      },
+    },
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "youthworkresource.com",
+        protocol: "http",
+
+        restApiRoutePrefix: "wp-json",
+
+        hostingWPCOM: false,
+        useACF: false,
+
+        acfOptionPageIds: [],
+
+        verboseOutput: false,
+        perPage: 100,
+        searchAndReplaceContentUrls: {
+          sourceUrl: "www.youthworkresource.com",
+          replacementUrl: "http://localhost:8000",
+        },
+        // Set how many simultaneous requests are sent at once.
+        concurrentRequests: 10,
+
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/users",
+          "**/menus",
+        ],
+        // Blacklisted routes using glob patterns
+        excludedRoutes: ["**/posts/1456"],
+
+        keepMediaSizes: false,
+        normalizer: function ({ entities }) {
+          return entities
+        },
+
+        normalizers: normalizers => [
+          ...normalizers,
+          {
+            name: "nameOfTheFunction",
+            normalizer: function ({ entities }) {
+              // manipulate entities here
+              return entities
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,

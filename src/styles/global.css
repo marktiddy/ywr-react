@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+html {
+  font-family: "" Open Sans ", sans-serif;" !important;
+}
+
+.top-jumbo {
+  background-image: url("../images/notebook.jpg");
+  background-size: cover;
+}
+
+.jumbotron {
+  background-image: url("../images/notebook.jpg");
+  background-size: cover;
+  background: none;
+}
