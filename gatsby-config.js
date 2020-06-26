@@ -1,4 +1,6 @@
 module.exports = {
+  pathPrefix: "/ywr-react",
+
   siteMetadata: {
     title: `YWR Gatsby`,
     description: `Experimental version of YWR`,
