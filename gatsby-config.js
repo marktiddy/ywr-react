@@ -23,7 +23,7 @@ module.exports = {
       resolve: "gatsby-source-wordpress",
       options: {
         baseUrl: "youthworkresource.com",
-        protocol: "http",
+        protocol: "https",
 
         restApiRoutePrefix: "wp-json",
 
@@ -36,7 +36,7 @@ module.exports = {
         perPage: 100,
         searchAndReplaceContentUrls: {
           sourceUrl: "www.youthworkresource.com",
-          replacementUrl: "http://localhost:8000",
+          replacementUrl: "marktiddy.githubpages.io/ywr-react",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
