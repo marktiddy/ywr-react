@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../../components/layout"
 import ContainerStyles from "./page.module.css"
+import SEO from "../../components/seo"
 
 class Page extends Component {
   render() {
@@ -9,9 +10,11 @@ class Page extends Component {
     const siteMetadata = this.props.data.site.siteMetadata
     const currentPage = this.props.data.wordpressPage
     const url = this.props.location.href ? this.props.location.href : "/"
-
+    console.log(this.props.data)
     return (
       <>
+        <SEO title={StaticPage.title} />
+
         <Layout>
           <div className={ContainerStyles.container}>
             <Link to={url}>

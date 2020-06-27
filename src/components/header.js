@@ -30,7 +30,6 @@ const Header = () => (
       `}
       render={data => {
         const menuItems = data.allWordpressMenusMenusItems.edges[0].node.items
-        console.log(menuItems)
         return (
           <Navbar expand="lg" variant="dark" className={ContainerStyles.main}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

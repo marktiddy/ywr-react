@@ -38,7 +38,8 @@ module.exports = {
         perPage: 100,
         searchAndReplaceContentUrls: {
           sourceUrl: "www.youthworkresource.com",
-          replacementUrl: "marktiddy.githubpages.io/ywr-react",
+          replacementUrl: "localhost:8000",
+          // replacementUrl: "marktiddy.github.io/ywr-react",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
@@ -50,7 +51,6 @@ module.exports = {
           "**/media",
           "**/tags",
           "**/taxonomies",
-          "**/users",
           "**/menus",
         ],
         // Blacklisted routes using glob patterns
